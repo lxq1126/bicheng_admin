@@ -1,0 +1,100 @@
+/*弹出层样式*/
+body,html{
+    background-color: #2C3E50;
+}
+.layer-wrap{
+    padding-top: 20px;
+    background-color: #2C3E50;
+    width: 100%;
+    height: 100%;
+     
+}
+.layer-table{
+    color: #E7E7E7;
+    font-size: .83em; 
+    font-family: "微软雅黑";
+}
+.layer-table tr{
+    line-height: 55px;
+}
+.layer-table input.input-text{
+    border: 1px solid #E7E7E7;
+    width: 80%;
+    line-height: 25px;
+    text-indent: 2px;
+   
+}
+.layer-table input.input-text[type="text"]{
+    color: #222; 
+    background-color:#D9D9D9;
+}
+.layer-btn{
+    background-color: #00A388;
+    border: 1px solid #00A388;
+    line-height: 25px;
+    padding:0 10px;
+    margin-right: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff; 
+    font-family: "微软雅黑";
+}
+.layer-btn:hover{
+    transition: all 0.5s ease-out 0s; 
+    border: 1px solid #00826C;
+    background-color: #00826C;
+}
+.textarea{
+    width: 80%;
+    margin-top: 10px;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+}
+.label{
+    padding-right: 15px;
+}
+.label .check-word{
+    position: relative;
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 7px;
+    font-size: .9em;
+    color: #E7E7E7;
+}
+i.red{
+    color: #FE6448;
+    line-height: 20px;
+}
+.letter2{
+    letter-spacing: 25px;
+    margin-right: -22px;
+}
+.letter3{
+    letter-spacing: 7px;
+    margin-right: -6px;
+}
+.letter4{
+    letter-spacing: 4px;
+    margin-right: -2px;
+}
+.letter6{
+    letter-spacing: 3px;
+    margin-right: -2px;
+}
+/*下拉选择菜单*/
+.selecte-name{
+    font-size: .9em;
+    color: #666;
+}
+.seach-table{
+    margin-bottom: 25px;
+    height: 26px;position: relative;
+}
+select{display: none;}
+.select_box{font-size: 13px;color: #222;width: 80%; height: 26px;line-height: 26px;margin-right: 15px;display: inline-block;text-align: left;font-family: "微软雅黑";}
+.select_showbox{border: 1px solid #CDCDCD;height: 26px;padding-left: 5px;background:#d9d9d9 url(../images/ico-select.png) no-repeat 98% 9px;}
+.select_option{border: 1px solid #CDCDCD;border-top: none;display: none;background-color: #fff; z-index: 999;position: relative;}
+.select_option li{padding-left: 5px;}
+.select_option li.selected{background-color: #F3F3F3; }
+.select_option li.hover{background: #FF7E66; color: #fff;}
+/*下拉选择菜单 end*/

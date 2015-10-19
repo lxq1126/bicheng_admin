@@ -1,0 +1,245 @@
+/*头部*/
+body{background-color: #DFE3E7;}
+title{
+    background-color: red;
+}
+.head-wrap{
+    height: 79px;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: .90em;
+    font-family: "微软雅黑";
+    position: relative;
+}
+.head{
+    height: 40px;
+    background-color: #E74C3C;
+}
+.head .logo{
+    display: block;
+    float: left;
+    width: 15%;
+    height: 30px;
+    padding-top: 10px;
+    background-color: #E74C3C;
+}
+.head .menu{
+    float: left;
+    width: 85%;
+    height: 40px;
+}
+.head .menu .cur{
+    float: left;
+    line-height: 40px;
+    position: relative;
+    padding:0 25px;
+    cursor: pointer;
+    color: #FBECEC;
+}
+ 
+ 
+.head .menu .li-bg{
+     background-color: #DFE3E7; color: #2F2923; 
+}
+.cur .child{
+    position: absolute;
+    width: 500px;
+    display: none;
+    color: #2F2923;
+}
+.cur .child.position-right{
+    left: 0;
+}
+.cur .child.position-left{
+    right: 0;
+}
+.cur .child.position-left li{
+    float: right;
+    
+}
+.cur .show{
+    display: block;
+}
+.cur .child li{
+    position: relative;
+    float: left;
+    line-height: 40px;
+    font-size: .88em;
+    margin-right: 40px;
+}
+.cur .child li:hover{
+    font-size: 1em;
+    color: #E74C3C;
+    transition: all 0.5s ease-out 0s;
+}
+.cur .child .child-bg{
+    font-size: 1em;
+    color: #E74C3C;
+}
+.cur .child li .margin{
+    margin: 0 7px;
+}
+.cur .child .first-li{
+    margin-right: 13px;
+}
+.cur .child .sanjiao{
+    position: absolute;
+    bottom: -16px;
+   /* width: 100%;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;*/
+    left: 49px;
+    font-size: 1.6em;
+    color: #fff;
+   
+}
+.cur .child .sanjiao .iconfont{
+    font-size: 1.6em;
+    color: #DFE3E7;
+}
+.cur .child li:hover .sanjiao .iconfont{
+    color: #fff;
+}
+
+.head-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    padding-right: 30px;
+}
+.head .head-right li{
+    float: right;
+    font-size: 1em;
+    margin-left: 20px;
+    line-height: 40px;
+    color: #fff;
+     cursor: pointer;
+}
+.head .head-right li a{
+     color: #fff;
+}
+.head .head-right li a:hover{
+    text-decoration: none;
+}
+.head .head-right li i.cur3{
+    color: #fff; 
+    font-size: 1.5em;
+}
+ .head .head-right li.cur1:hover a{
+    color: #2980B9;
+ }
+ .head .head-right li.cur2:hover a{
+    color: #9AD04E;
+ }
+ 
+
+
+
+
+ 
+
+/*图表样式*/
+.ichart-count{
+    position: relative;
+    width: 65.25%;
+    border: 1px solid #cdcdcd;
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.short2{
+    width: 33.25%;
+}
+.short3{
+    width: 32.3%;
+}
+.clear{
+    clear: both;
+}
+.margin-left{
+    margin-right: 1.5%;
+}
+.margin-both{
+    margin: 0 1.5%;
+}
+.margin-btm{
+    margin-bottom: 30px;
+}
+.chart-title{
+    border-bottom: 1px solid #cdcdcd;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 20px;
+    font-size: .8em;
+    color: #fff;
+    font-family: "微软雅黑";
+}
+.title-bg1{
+    background-color: #2980B9;
+}
+.title-bg2{
+    background-color: #FF5335;
+}
+.title-bg3{
+    background-color: #00ADA7;
+}
+.title-bg4{
+    background-color: #C77966;
+}
+.title-bg5{
+    background-color: #E74C3C;
+}
+.heji{
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #cdcdcd;
+    position: absolute;
+    bottom:0;
+    left: 0;
+}
+.heji li{
+    float: left;
+    width: 33.3%;
+    height: 60px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+.heji li.border-lr{
+    border-left:  1px solid #cdcdcd;
+    border-right:  1px solid #cdcdcd;
+}
+.heji li .iconfont{
+    font-size: 2.5em;
+    line-height: 60px;
+    padding-left:10%;
+}
+.blue{
+    color: #0D8ECF;
+}
+.orange{
+    color: #EF7707;
+}
+.green{
+    color: #90C841;
+}
+.heji li p{
+    float: right;
+    width: 79%;
+    text-align: center;
+}
+.heji li p.en100{
+    width: 100%;
+}
+.ios-num{
+    font-size: 1.5em;
+    line-height: 40px;
+}
+span.title-color{
+    font-size: 0.8em;
+    font-family: "微软雅黑";
+}
+.chart-title i.iconfont{
+    padding-right: 10px;
+}
