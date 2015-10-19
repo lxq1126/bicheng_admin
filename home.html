@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/reset.css" /> 
+    <script src="js/ichart.1.2.1.min.js"></script>
+    <script src="js/jquery-1.11.0.js"></script>
+    
+</head>
+<body>
+<div class="wrap">
+    <!-- 折线图 -->
+    <div class="ichart-count margin-left margin-btm">
+        <p class="chart-title title-bg1"><i class="iconfont">&#xe602;</i>APP下载量 (2015-07 至 2015-08)</p>
+        <div id="appichart"></div>
+        <ul class="heji">
+            <li><i class="iconfont blue">&#xe61a;</i>
+            <p><span class="ios-num blue">96959</span><br /><span class="title-color blue">月下载量</span> </p>
+           
+            </li>
+            <li class="border-lr"><i class="iconfont orange">&#xe603;</i>
+            <p><span class="ios-num orange">96959</span><br /><span class="title-color orange">月下载量</span> </p>
+            </li>
+            <li><i class="iconfont green">&#xe604;</i>
+            <p><span class="ios-num green">96959</span><br /><span class="title-color green">月注册量</span> </p>
+            </li>
+        </ul>
+    </div>
+    <!-- 柱形图 -->
+    <div class="ichart-count short2">
+        <p class="chart-title title-bg2"><i class="iconfont">&#xe602;</i>APP下载总量</p>
+        <div id="apphejiichart"></div>
+        <ul class="heji">
+            <li> 
+            <p class="en100 blue"><span class="ios-num">96959</span><br /><span class="title-color">总数</span> </p>
+           
+            </li>
+            <li class="border-lr orange"> 
+            <p class="en100"><span class="ios-num">96959</span><br /><span class="title-color">总数</span> </p>
+            </li>
+            <li> 
+            <p class="en100"><span class="ios-num green">96959</span><br /><span class="title-color green">总数</span> </p>
+            </li>
+        </ul>
+    </div> 
+    <!-- 商品类型扇形图 -->
+    <div class="ichart-count clear short3 two-row">
+        <p class="chart-title title-bg3"><i class="iconfont">&#xe602;</i>商品类型百分比</p>
+        <div id="roundchart"></div>
+    </div> 
+    <div class="ichart-count short3 margin-both two-row">
+        <p class="chart-title title-bg4"><i class="iconfont">&#xe602;</i>商家入驻总和</p>
+        <div id="app-chart"></div>
+    </div> 
+    <div class="ichart-count short3 two-row">
+        <p class="chart-title title-bg5"><i class="iconfont">&#xe602;</i>总交易额</p>
+        <div id="app-chart"></div>
+    </div> 
+</div> 
+  <script type="text/javascript">
+     
+    $(function(){                    
+        var windowWidth = $(window).width();  
+        var windoHeight = $(window).height();
+        
+        iframHeight = windoHeight - 90; // ifram的高度
+        oneRow = iframHeight*.6; //第一行包裹容器的高度
+        twoRow = iframHeight*.4; //第二行包裹容器的高度
+        
+        $(".ichart-count").css({"height":oneRow+"px"});//赋值第一行的高度
+        $(".two-row").css({"height":twoRow+"px"});//赋值第二行的高度
+
+        oneRowChartHeight = oneRow*.5; //图形盒子的高度
+        oneBottomTitle = oneRow*.15; //第一行包裹容器底部展示栏的高度
+
+
+         
+        lineWidth = windowWidth*.6; //折线图盒子的宽度  
+        lineHeight = oneRow*.77;  //折线图盒子的高度
+        lineoffsety = -lineHeight*.07; //折线图距离边框的高度
+
+        legendOffsetx = -lineWidth*0.35; //提示图文的距离左侧边框的距离
+        coordinateWidth = lineWidth*0.95; //折线图的宽
+        coordinateHeight = oneRow*.55; //折线图的高
+        
+        var data = [
+            {
+                name : 'IOS',
+                value:[14,11,12,14,24,44,27,14,11,12,14,24,44,27,14,11,12,14,24,44,27,22,23,26,26,19,21,26,26,30],  //'数据来源
+                color:'#0d8ecf',
+                line_width:2
+            },
+            {
+                name : 'Android',
+                value:[17,22,33,14,35,16,31,17,22,33,14,35,16,31,17,22,33,14,35,16,31,17,22,33,14,35,16,31,26,31],  //'数据来源
+                color:'#ef7707',
+                line_width:2
+            },
+            {
+                name : '微信关注量',
+                value:[37,12,13,24,15,36,41,37,12,13,24,15,36,41,37,12,13,24,15,36,41,37,12,13,24,15,36,41,33,33],  //'数据来源
+                color:'#90C841',
+                line_width:2
+            }
+         ];
+        var labels = ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"];
+        var line = new iChart.LineBasic2D({
+            render : 'appichart',
+            data: data,
+            align:'center',
+            title : ' ',
+            subtitle : '',
+            footnote : '', 
+            width : lineWidth,//折线图的宽度
+            height : lineHeight,//折线图的高度
+            offsety : lineoffsety, //折线图距离边框的高度
+            border:false,
+            tip:{
+                enable:true,
+                shadow:true,
+
+            },
+            legend : {
+                enable : true,
+                row:1,//设置在一行上显示，与column配合使用
+                column : 'max',
+                color:'#222',
+                fontsize:13,
+                font:"宋体",
+                valign:'bottom',
+                sign:'bar',
+                background_color:null,//设置透明背景
+                offsetx:legendOffsetx,//设置x轴偏移，满足位置需要
+                offsety:15,
+                border : true,
+                sign_size:35,
+                sign_space:10,
+            },
+            crosshair:{
+                enable:true,
+                line_color:'#62bce9'
+            },
+            sub_option : {
+                label:false,
+                point_hollow : false
+            },
+            coordinate:{
+                width:coordinateWidth,
+                height:coordinateHeight,
+                axis:{
+                    color:'#9f9f9f',
+                    width:[0,0,1,0],
+                },
+                grids:{
+                    vertical:{
+                        way:'share_alike',
+                        value:6
+                    },
+                    horizontal:{
+                        way:'share_alike',
+                        value:6
+                    }
+                },
+                gridVStyle:{
+                    color:'#fff'
+                },
+                gridHStyle:{
+                    color:'#cdcdcd'
+                },
+                scale:[{
+                     position:'left',   
+                     start_scale:0,
+                     end_scale:50,
+                     scale_space:10,
+                     scale_size:2,
+                     scale_color:'#9f9f9f'
+                },{
+                     position:'bottom', 
+                     labels:labels
+                }]
+            }
+        });
+         line.draw();//开始画图
+        // 折线图end
+         
+        // 圆柱形
+        yzWidth = windowWidth*.4; //圆柱形图盒子的宽度  
+        yzHeight = oneRow*.78;  //圆柱形盒子的高度
+        yzoffsety = -15; //圆柱形距离边框的高度
+        legendOffsetxs = -yzWidth*0.41; //提示图文的距离左侧边框的距离
+        yzdinateWidth = yzWidth*0.6; //圆柱形的宽
+        yzdinateHeight = oneRow*.55; //圆柱形的高
+        yzoffsetx = -yzWidth*.09;
+
+        var data = [
+                    {
+                        name : 'IOS',
+                        value:[1245],
+                        color:'#0D8ECF'
+                    },
+                    {
+                        name : 'Android',
+                        value:[860],
+                        color:'#EF7707'
+                    },
+                    {
+                        name : '微信',
+                        value:[1160],
+                        color:'#90C841'
+                    }
+                 ];
+        var chart = new iChart.ColumnMulti2D({
+                render : 'apphejiichart',
+                data: data,
+                labels:[""],
+                width : yzWidth,
+                height : yzHeight,
+                border:false,
+                background_color : '#ffffff',
+                offsetx : yzoffsetx,
+                offsety : yzoffsety, //折线图距离边框的高度
+                legend:{
+                    enable:true,
+                    background_color : null,
+                    border : {
+                        enable : false
+                    },
+                    offsetx:legendOffsetxs,//设置x轴偏移，满足位置需要
+                    offsety:150,
+                    row:1,//设置在一行上显示，与column配合使用
+                    column : 'max',
+                    color:'#222',
+                    fontsize:13,
+                    font:"宋体",
+                    border : true,
+                    sign_size:35,
+                    sign_space:10,
+                    sign:'bar',
+                },
+
+                coordinate:{
+                    background_color : '#fff',
+                    scale:[{
+                         position:'left',   
+                         start_scale:0,
+                         end_scale:5000,
+                         scale_space:500
+                    }],
+                    axis:{
+                    color:'#9f9f9f',
+                    width:[0,0,1,0],
+                },
+
+                gridVStyle:{
+                    color:'#fff'
+                },
+                gridHStyle:{
+                    color:'#cdcdcd'
+                },
+                    width:yzdinateWidth,
+                    height:yzdinateHeight
+                }
+        });
+        chart.draw();
+});  
+
+// 商品类型扇形图 
+$(function(){
+
+    var windowWidth = $(window).width();  
+    var windoHeight = $(window).height();
+    
+    iframHeight = windoHeight - 90; // ifram的高度
+    twoRow = iframHeight*.4; //第二行包裹容器的高度
+
+    var windowWidth = $(window).width(); //减去左侧bar90和边距60的值
+    var windoHeight = $(window).height();
+
+
+    pluginWidth = windowWidth*0.323; //容器的宽度
+    pluginHeight = twoRow;//容器的高度
+
+    
+    pluginoffsetx = -pluginWidth*0.15;//圆形距离盒子边框的距离
+    legendoffsetx = pluginWidth*0.15; //提示图表距离边框的距离
+    legendoffsety = -pluginHeight*0.1;;
+
+    var data = [
+                {name : '化妆品',value : 50.2,color:'#EA2E49'},
+                {name : '保健品',value : 22.5,color:'#4572a7'},
+                {name : '衣服',value : 24.3,color:'#aa4643'},
+                {name : '电子',value : 8.4,color:'#89a54e'},
+                {name : '生活用品',value : 3.6,color:'#80699b'},
+                {name : '其它',value : 1.2,color:'#3d96ae'}
+            ];
+
+    
+    var chart = new iChart.Pie2D({
+        render : 'roundchart',
+        data: data,
+         border:false,
+        
+        title : {
+            text : '',
+            height:40,
+            fontsize : 30,
+            color : '#282828'
+        },
+        footnote : {
+            text : '',
+            color : '#486c8f',
+            fontsize : 12,
+            padding : '0 38'
+        },
+        sub_option : {
+            mini_label_threshold_angle : 40,//迷你label的阀值,单位:角度
+            mini_label:{//迷你label配置项
+                fontsize:15,
+                fontweight:600,
+                color : '#ffffff'
+            },
+            label : {
+                background_color:null,
+                sign:false,//设置禁用label的小图标
+                padding:'0 4',
+                border:{
+                    enable:false,
+                    color:'#666666'
+                },
+                fontsize:11,
+                fontweight:600,
+                color : '#4572a7'
+            },
+            border : {
+                width : 2,
+                color : '#ffffff'
+            },
+            listeners:{
+                parseText:function(d, t){
+                    return d.get('value')+"%";//自定义label文本
+                }
+            } 
+        },
+        legend:{
+            enable:true,
+            padding:0,
+            offsetx:legendoffsetx,
+            offsety:legendoffsety+30,
+            color:'#3e576f',
+            fontsize:14,//文本大小
+            sign_size:15,//小图标大小
+            line_height:20,//设置行高
+            sign_space:10,//小图标与文本间距
+            border:false,
+            align:'left',
+            background_color : null//透明背景
+        }, 
+        shadow : true,
+        shadow_blur : 6,
+        shadow_color : '#aaaaaa',
+        shadow_offsetx : 0,
+        shadow_offsety : 0,
+        background_color:'#ffffff',
+        align:'right',//右对齐
+        offsetx:pluginoffsetx,//设置向x轴负方向偏移位置60px
+        offset_angle:-90,//逆时针偏移120度
+        width : pluginWidth,//扇形盒子的宽度
+        height : pluginHeight,//扇形盒子的高度
+        radius:150
+    });
+    //利用自定义组件构造右侧说明文本
+    chart.plugin(new iChart.Custom({
+        drawFn:function(){
+            //在右侧的位置，渲染说明文字
+            chart.target.textAlign('start')
+            .textBaseline('top')
+            .textFont('600 20px Verdana')
+            .fillText(' ',100,80,false,'#be5985',false,24)
+            .textFont('600 12px Verdana')
+            .fillText(' ',120,160,false,'#999999');
+        }
+    }));
+    
+    chart.draw();
+});
+</script>
+</body>
+</html>
