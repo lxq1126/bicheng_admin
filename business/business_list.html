@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" /> 
+    <link rel="stylesheet" href="../css/style.css" /> 
+    <link rel="stylesheet" href="../css/minimal/red.css">
+</head>
+<body>
+    <div class="wrap">
+        <table class="seach-table" width="100%">
+            <td><span class="add margin-top add-business" title="添加商家"> + 添加商家</span></td>
+            <td style="text-align:right" ><span class="selecte-name">商家状态：</span></td>
+            <td width="200" style="text-align:right"> 
+                <select name="choose" id="choose">
+                    <option selected="selected">==选择==</option>
+                    <option value="">精品系列</option>
+                    <option value="">激活状态</option>
+                    <option value="">未激活</option>
+                </select>
+            </td>
+            <td width="320"> 
+                <div class="search-input">
+                    <input class="input-text text-margin" type="text" placeholder="输入关键词"/>
+                    <button class="button postion" >查找</button>
+                </div>
+            </td>
+        </table>
+        <table width="100%"  class="table-list">
+            <tr>
+                <th><input id="allcheck" type="checkbox" /></th>
+                <th><label for="allcheck">编号</label></th>
+                <th>商家名称</th>
+                <th>商家logo</th>
+                <th>默认账号</th>
+                <th>商家电话</th>
+                <th>精品</th>
+                <th>精品排序</th>
+                <th>激活</th>
+                <th>加入时间</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>01</td>
+                <td>青蛙王子肌肤清新水润0负担。</td>
+                <td><img src="../images/ad_img/1.jpg" class="ad-img" /></td>
+                <td>4s4gsd49</td>
+                <td>1561616111</td>
+                <td><img src="../images/not.gif" class="status-img" /></td>
+                <td>70</td>
+                <td><img src="../images/not.gif" class="status-img" /></td>
+                <td>1970-01-01</td>
+                <td>
+                   <a href="#" class="edit-a" title="编辑"><i class="iconfont">&#xe628;</i></a>
+                    <a href="#" class="edit-a" title="删除"><i class="iconfont">&#xe61d;</i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input id="all-delete" type="checkbox" /> 
+                </td>
+                
+                <td colspan="10"><input class="btn fl mgtop2" type="button" value="全部删除" style="float:left;" />
+                    <div id="pageGro" class="cb">
+                        <div class="pageUp">上一页</div>
+                        <div class="pageList">
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                            </ul>
+                        </div>
+                        <div class="pageDown">下一页</div>
+                    </div>
+                    <span class="fr mgtop2 num-con">共<i class="num">132</i>条记录</span>
+                </td>
+                 
+            </tr>
+        </table>
+    </div>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/style.js"></script>
+<script src="../js/icheck.js"></script> <!-- 需放在尾部 -->
+</body>
+</html>
