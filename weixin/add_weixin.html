@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" /> 
+    <link rel="stylesheet" href="../css/layer.css" />
+    <link rel="stylesheet" href="../css/minimal/red.css">
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/style.js"></script>
+</head>
+<body>
+<div class="layer-wrap">
+    <form action="" method="get">
+        <table class="layer-table" width="100%">
+            <tr>
+                <th>公众号名称</span></th>
+                <td><input type="text" class="input-text"  required="required"/></td>
+            </tr>
+            
+            <tr>
+                <th>公众号类型</th>
+               <td>
+                    <label class="label" for="dyh"><input id="dyh" type="radio" /><span class="check-word">订阅号</span></label>
+                    <label class="label" for="fwh"> <input id="fwh" type="radio" /><span class="check-word">服务号</span></label>
+                     <label class="label" for="gjfwh"> <input id="gjfwh" type="radio" /><span class="check-word">高级服务号</span></label>
+                </td>
+            </tr>
+            <tr>
+                <th>appsecret</th>
+                <td><input type="text" class="input-text" required="required"/></td>
+            </tr>
+             <tr>
+                <th>appid</th>
+                <td><input type="text" class="input-text"/></td>
+            </tr>
+            <tr>
+                <th>是否授权</th>
+                 <td>
+                    <label class="label" for="kqsq"><input id="kqsq" type="radio" /><span class="check-word">开启授权</span></label>
+                    <label class="label" for="gbsq"> <input id="gbsq" type="radio" /><span class="check-word">关闭授权</span></label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input class="layer-btn" type="submit" value="确认保存" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script src="../js/icheck.js"></script> <!-- 需放在尾部 -->
+</body>
+</html>
