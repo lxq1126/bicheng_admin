@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>微电子分销系统-后台管理中心</title>
+    <link rel="Shortcut Icon" href="images/logo.gif" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <script src="js/jquery-1.11.0.js"></script>
+     <script src="js/style.js"></script>
+</head>
+<body>
+<div class="head-wrap">
+    <div class="head">
+        <img src="" alt="" class="logo" />
+        <!-- <object class="logo"  data="images/logo.svg" type="image/svg+xml"></object>  -->
+        <ul class="menu">
+            <li class="cur home onmouse li-bg" onclick="go(10,'home.html')"><span>首页</span>
+                <ul class="child position-right show">
+                    <li>
+                        12313111111111111111111111111111111111111131
+                    </li>
+                </ul>
+            </li>
+            <li class="cur onmouse"><span>系统设置</span>
+                <ul class="child position-right">
+                    <li onclick="go(10,'system/ad_set.html')" class="first">
+                        <i class="iconfont margin">&#xe619;</i>广告设置
+                    </li>
+                    <li class="menu-bg home-li" onclick="go(10,'system/pay_set.html')">
+                       <i class="iconfont margin">&#xe60c;</i>支付管理
+                         
+                    </li>
+                    <li onclick="go(10,'system/shop_mould.html')">
+                   <i class="iconfont margin">&#xe610;</i>店铺模板
+                         
+                    </li>
+                </ul>
+            </li>
+            <li class="cur onmouse"><span>商家管理</span>
+                <ul class="child position-right">
+                    <li onclick="go(10,'business/business_list.html')" class="first">
+                        <i class="iconfont margin">&#xe609;</i>商家列表
+                    </li>
+                </ul>
+            </li>
+            <li class="cur onmouse"><span>商品管理</span>
+                <ul class="child position-right">
+                    <li onclick="go(10,'goods/goods_list.html')" class="first">
+                        <i class="iconfont margin">&#xe61c;</i>商品列表
+                    </li>
+                </ul>
+            </li>
+            <li class="cur onmouse"><span>会员管理</span>
+                <ul class="child position-left">
+                    <li onclick="go(10,'user/user_list.html')" class="first-li">
+                        <i class="iconfont margin">&#xe60f;</i>会员列表
+                    </li>
+                </ul>
+            </li>
+            <li class="cur onmouse"><span>微信平台</span>
+                 <ul class="child position-left">
+                    <li onclick="go(10,'weixin/weixin_message.html')" class="first-li">
+                        <i class="iconfont margin">&#xe616;</i>公众号管理
+                    </li>
+                    <li onclick="go(10,'weixin/weixin_m_list.html')">
+                        <i class="iconfont margin">&#xe615;</i>信息分类
+                    </li>
+                    <li onclick="go(10,'weixin/weixin_tuwen.html')">
+                        <i class="iconfont margin">&#xe606;</i>图文信息
+                    </li>
+                    <li onclick="go(10,'weixin/weixin_wenben.html')">
+                        <i class="iconfont margin">&#xe61a;</i>文本信息
+                    </li>
+                </ul>
+            </li>
+            <li class="cur onmouse"><span>管理员</span>
+                 <ul class="child position-left">
+                    <li onclick="go(10,'business/business_list.html')" class="first-li">
+                        <i class="iconfont margin">&#xe618;</i>管理员列表
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- 右侧 -->
+        <ul class="head-right">
+            <li class="cur1"><a href="#"><i class="iconfont cur cur1">&#xe632;</i>退出</a></li>
+            <li class="cur2" onclick="location.reload()"><a href="#"><i class="iconfont cur cur2">&#xe601;</i>刷新</a></li>
+            <li><a href="#"><i class="iconfont cur cur3">&#xe634;</i>etw123</a></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <iframe src="" frameborder="0" id="mainFrame" class="mainFrame" width="100%"></iframe>
+</div>
+<script>
+function go(id,url){
+    $("#mainFrame").attr('src',url);
+}
+$(function(){
+    $("#mainFrame").attr('src','home.html');//加载首页
+
+
+
+})
+ 
+ 
+// function myrefresh()
+//     {
+        
+//        parent.mainFrame.location.reload();
+//     }
+    // setTimeout('myrefresh()',1000); //指定1秒刷新一次
+</script>
+</body>
+</html>
